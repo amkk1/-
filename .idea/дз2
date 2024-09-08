@@ -1,0 +1,31 @@
+class Kot:
+    count_of_kot = 2
+    def __init__(self, name, age = 3):
+        self.name = name
+        self.age = age
+        print('Hi!')
+
+    def __str__(self):
+        print(f'Я {self.name}, мені {self.age} років')
+
+    def __del__(self):
+        print(f'Я {self.name},і я пішов ')
+        Kot.count_of_kot -= 1
+
+        def __len__(self):
+            return self.age
+
+        def grow(self, delta=1):
+            if self.age + delta > 100:
+                print("Error Age")
+                return
+            self.age += delta
+
+print(Kot.count_of_kot)
+
+Myrchik = Kot(name = 'Myrchik', age = 3)
+print(Myrchik.age)
+
+print(Myrchik.count_of_kot)
+
+Myrchik.info()
